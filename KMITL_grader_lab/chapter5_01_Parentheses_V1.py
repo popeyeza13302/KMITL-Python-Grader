@@ -1,4 +1,4 @@
-class stack:
+class Stack:
     """< Default Stack >"""
 
     def __init__(self, list=None):
@@ -36,8 +36,8 @@ def match(open, close):
 
 
 lst = input('Enter Input : ')
-stack_paren = stack()
-stack_left = stack()
+stack_paren = Stack()
+stack_left = Stack()
 
 for paren in lst:
     if paren in '([':
