@@ -1,3 +1,4 @@
+# week 3
 class Stack:
     """< Default Stack >"""
     def __init__(self, list=None):
