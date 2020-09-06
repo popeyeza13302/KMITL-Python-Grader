@@ -1,3 +1,4 @@
+# week 2
 string = input('Enter String : ')
 
 

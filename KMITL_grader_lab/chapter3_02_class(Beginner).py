@@ -1,3 +1,4 @@
+# week 2
 class Bus:
     def __init__(self, people, fare):
         self.people = people

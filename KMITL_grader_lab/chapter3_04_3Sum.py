@@ -1,3 +1,4 @@
+# week 2
 array = [int(i) for i in input('Enter Your List : ').split()]
 
 sum = 0

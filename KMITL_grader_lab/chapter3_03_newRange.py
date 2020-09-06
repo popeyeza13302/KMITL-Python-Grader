@@ -1,3 +1,4 @@
+# week 2
 print('*** New Range ***')
 listInput = [float(i) for i in input('Enter Input : ').split()]
 
