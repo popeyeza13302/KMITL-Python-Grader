@@ -1,3 +1,4 @@
+# week 5
 class Queue:
     def __init__(self, que):
         self.item = []  # for id
