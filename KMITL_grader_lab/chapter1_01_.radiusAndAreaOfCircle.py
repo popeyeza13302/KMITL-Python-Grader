@@ -1,3 +1,4 @@
+# week 1
 import math
 
 r = float(input('r='))

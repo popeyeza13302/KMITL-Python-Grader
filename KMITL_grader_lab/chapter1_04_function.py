@@ -1,3 +1,4 @@
+# week 1
 def odd_list(al):
     List = al
     newList = list()

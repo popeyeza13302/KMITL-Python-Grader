@@ -1,5 +1,5 @@
+# week 1
 print('*** multiplication or sum ***')
-#x, y = input('Enter num1 num2 : ').split()
 x, y = map(int, input('Enter num1 num2 : ').split())
 product = x*y
 sum = x+y

@@ -1,3 +1,4 @@
+# week 1
 print('*** Fun with countdown ***')
 ls = [int(i) for i in input('Enter List : ').split()]
 totalList = []
