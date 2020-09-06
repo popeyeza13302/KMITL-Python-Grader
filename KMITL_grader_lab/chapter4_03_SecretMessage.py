@@ -64,7 +64,7 @@ def decodemsg(q1, q2):
     return lst
 
 
-q_str, q_num = map(Queue, map(list, input('Enter String and Code :').split(',')))
+q_str, q_num = map(Queue, map(list, input('Enter String and Code : ').split(',')))
 
 print('Encode message is : ', encodemsg(q_str, q_num))
 print('Decode message is : ', decodemsg(q_str, q_num))
