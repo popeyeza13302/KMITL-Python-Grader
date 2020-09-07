@@ -1,4 +1,4 @@
-# week 5
+# week 5 finish
 class Queue:
     def __init__(self, lst=None):
         if lst == None:
