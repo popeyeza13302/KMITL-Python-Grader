@@ -61,8 +61,11 @@ class SinglyLinkedList:
             return
         if x != 1:
             print('index =', index, 'and data =', data)
-        p = self.nodeAt(index - 1)
-        p.next = Node(data, p.next)
+        prevNode = self.nodeAt(index - 1)
+        newNode = Node(data, prevNode.next)
+        prevNode.next = newNode
+
+        # p.next = Node(data, p.next)   # shortcut
         self.size += 1
 
     '''
@@ -85,5 +88,5 @@ print(linklst)
 
 for i in inp[1:]:
     i = i.split(':')
-    linklst.insert(int(i[0]), i[1],0)
+    linklst.insert(int(i[0]), i[1], 0)
     print(linklst)
