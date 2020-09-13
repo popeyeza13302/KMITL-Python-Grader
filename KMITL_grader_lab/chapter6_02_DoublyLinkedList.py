@@ -48,10 +48,16 @@ class DoublyLinkedList:
         return self.size() == 0
 
     def nodeAt(self, index):
-        p = self.head
-        for _ in range(-1, index):
-            p = p.next
-        return p        # return Node
+        if index >= 0:
+            p = self.head
+            for _ in range(-1, index):
+                p = p.next
+            return p  # return Node
+        else:
+            p = self.tail
+            for _ in range(index, -1):
+                p = p.prev
+            return
 
     def append(self, data):
         self.insert(self.size(), data)
