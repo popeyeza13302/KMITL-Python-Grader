@@ -6,3 +6,13 @@ print(lst)
 strrr = ' -1'
 
 print(strrr)
+
+
+num = -100
+
+x = -num
+
+print(x)
+
+for i in range(-5,--1):
+    print(i)

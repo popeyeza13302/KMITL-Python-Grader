@@ -22,8 +22,6 @@ class DoublyLinkedList:
         self.head.next = self.tail
         self.tail.prev = self.head
 
-        self.sizelst = 0
-
     def __str__(self):
         if self.isEmpty():
             return "Empty"
@@ -43,6 +41,14 @@ class DoublyLinkedList:
             s += str(p.data) + " "
             p = p.prev
         return s
+
+    def size(self):
+        p = self.head.next
+        count = 0
+        while p != self.tail:
+            count += 1
+            p = p.next
+        return count
 
     def isEmpty(self):
         return self.size() == 0
@@ -71,7 +77,6 @@ class DoublyLinkedList:
         print('PRE', newNode.prev.data)
         print('___')
         '''
-        self.sizelst += 1
 
     def search(self, data):
         p = self.head.next
@@ -81,16 +86,13 @@ class DoublyLinkedList:
             p = p.next
         return 'Not Found'
 
-    def index(self, data):
+    def indexOf(self, data):
         p = self.head.next
         for i in range(self.size()):
             if p.data == data:
                 return i
             p = p.next
         return -1
-
-    def size(self):
-        return self.sizelst
 
     def pop(self, index):
         if not 0 <= index < self.size():
@@ -101,7 +103,6 @@ class DoublyLinkedList:
         currentNode.prev.next = currentNode.next
         currentNode.next.prev = currentNode.prev
 
-        self.sizelst -= 1
         return 'Success'
 
 # AP I,AP Love,AP KMITL,AP 2020
@@ -117,7 +118,7 @@ for i in inp:
     elif i[:2] == "SI":
         print("Linked List size = {0} : {1}".format(L.size(), L))
     elif i[:2] == "ID":
-        print("Index ({0}) = {1} : {2}".format(i[3:], L.index(i[3:]), L))
+        print("Index ({0}) = {1} : {2}".format(i[3:], L.indexOf(i[3:]), L))
     elif i[:2] == "PO":
         before = "{}".format(L)
         k = L.pop(int(i[3:]))
