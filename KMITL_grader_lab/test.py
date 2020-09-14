@@ -16,3 +16,16 @@ print(x)
 
 for i in range(-5,--1):
     print(i)
+
+def maxDigit():
+    # find max Value
+    maxNum = 123
+    digit = 0
+    while maxNum != 0:
+        maxNum = maxNum // 10
+        digit += 1
+    return digit
+
+print(maxDigit())
+
+print(-10//10)
