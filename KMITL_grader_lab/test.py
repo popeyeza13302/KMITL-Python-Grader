@@ -29,3 +29,13 @@ def maxDigit():
 print(maxDigit())
 
 print(-10//10)
+
+
+data = 123
+
+original = data
+print(original)
+original = -(original)
+print(original)
+
+print(-28%10)

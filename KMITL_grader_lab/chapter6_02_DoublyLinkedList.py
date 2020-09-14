@@ -1,3 +1,4 @@
+# week 6
 # Node Class
 class Node:
     def __init__(self, data, prev=None, next=None):
