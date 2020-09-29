@@ -54,3 +54,7 @@ print(tp.index(4))
 
 print(chr(65))
 print(ord('A'))
+
+for i,j in zip(range(5),range(5)):
+    print(i)
+    print(j)

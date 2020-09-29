@@ -54,6 +54,9 @@ print('last',lst)
 # lst = sorted(lst)
 # print(lst)  # right one
 
+lst = [1, 3, 5, 2, 4,4, 6]
+x = sorted(lst)
+print(lst)
 # print(sorted(lst))   right one
 
 # lst.sort()
