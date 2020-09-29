@@ -22,6 +22,7 @@ class DoublyLinkedList:
         self.tail = Node(None, None, None)
         self.head.next = self.tail
         self.tail.prev = self.head
+        self.ssize = 0
 
     def __str__(self):
         if self.isEmpty():
@@ -44,12 +45,15 @@ class DoublyLinkedList:
         return s
 
     def size(self):
+        '''
         p = self.head.next
         count = 0
         while p != self.tail:
             count += 1
             p = p.next
         return count
+        '''
+        return self.ssize
 
     def isEmpty(self):
         return self.size() == 0
@@ -90,6 +94,7 @@ class DoublyLinkedList:
         print('PRE', newNode.prev.data)
         print('___')
         '''
+        self.ssize += 1
 
     def search(self, data):
         p = self.head.next
@@ -116,6 +121,7 @@ class DoublyLinkedList:
         currentNode.prev.next = currentNode.next
         currentNode.next.prev = currentNode.prev
 
+        self.ssize -= 1
         return 'Success'
 
 # AP I,AP Love,AP KMITL,AP 2020

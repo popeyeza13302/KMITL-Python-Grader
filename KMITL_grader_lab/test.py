@@ -35,7 +35,7 @@ data = 123
 
 original = data
 print(original)
-original = -(original)
+original = -original
 print(original)
 
 print(-28 % 10)
@@ -62,3 +62,9 @@ def DecimalToBinary(num):
 DecimalToBinary(2)
 
 print(type(str(10).zfill(5)))
+
+x = 2000000000000000000
+print(id(x))
+print(id(x))
+y=x
+print(id(y))
