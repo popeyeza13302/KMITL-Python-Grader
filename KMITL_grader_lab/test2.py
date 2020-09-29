@@ -50,3 +50,7 @@ print(lst)
 
 tp = tuple([1,2,3,4,5])
 print(tp.index(4))
+
+
+print(chr(65))
+print(ord('A'))
