@@ -68,3 +68,10 @@ print(id(x))
 print(id(x))
 y=x
 print(id(y))
+
+hahah = ['1 2', '3 4']
+sour = int(hahah[1].split()[0])
+bitter = int(hahah[1].split()[1])
+
+print(sour)
+print(bitter)

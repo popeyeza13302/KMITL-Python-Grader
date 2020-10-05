@@ -39,7 +39,7 @@ class SinglyLinkedList:
     def nodeAt(self, i):
         p = self.head
         for j in range(-1, i):
-            p = next()
+            p = p.next
         return p
 
     def append(self, data):
@@ -47,7 +47,8 @@ class SinglyLinkedList:
 
     def insertAfter(self, i, data):
         p = self.nodeAt(i-1)
-        p.next = self.Node(data, p.next)
+        newNode = self.nodeAt(data, p.next)
+        p.next = newNode
         self.size += 1
 
     def deleteAfter(self, i):

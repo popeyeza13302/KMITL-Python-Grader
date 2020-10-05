@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self,data=None,next=None):
+    def __init__(self, data=None, next=None):
         self.data = data
         if next is None:
             self.next = None
@@ -47,11 +47,11 @@ class SinglyLinkedList:
         prevNode = self.nodeAt(index - 1)
         popNode = prevNode.next
         if popNode is None:
-            return popNode
+            return None
         else:
             prevNode.next = popNode.next
             self.size -= 1
-            return popNode
+            return popNode.data
 
     def popRight(self):
         self.pop(self.size-1)

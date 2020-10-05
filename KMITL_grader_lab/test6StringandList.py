@@ -57,6 +57,9 @@ print('last',lst)
 lst = [1, 3, 5, 2, 4,4, 6]
 x = sorted(lst)
 print(lst)
+print(lst[1:])
+for i in lst[1:]:
+    print('->',i,end=' ')
 # print(sorted(lst))   right one
 
 # lst.sort()
