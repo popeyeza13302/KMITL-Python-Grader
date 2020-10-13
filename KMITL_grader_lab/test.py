@@ -91,3 +91,10 @@ print(maasdasd[1:])
 
 
 print(str([1,2,3,4,9,5]))
+
+def testWhileFunc():
+    while True:
+        print('1')
+        return
+
+testWhileFunc()
