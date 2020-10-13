@@ -16,3 +16,9 @@ print(A['two'])
 
 print(A.get('new', 0))
 print(A)
+
+
+for i in (B.values()):
+    B[i] = B.get(i,0)+1
+
+print(B)

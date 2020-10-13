@@ -75,3 +75,19 @@ bitter = int(hahah[1].split()[1])
 
 print(sour)
 print(bitter)
+
+temp = [7,7,8]
+asts = [1,2,3]
+x= [asts[1]] + temp
+print(x)
+
+thisislist = [1,2,3,4]
+thisislist.extend([1,2,3,4])
+print(thisislist)
+
+
+maasdasd = [2]
+print(maasdasd[1:])
+
+
+print(str([1,2,3,4,9,5]))
