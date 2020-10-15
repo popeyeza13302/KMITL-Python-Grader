@@ -13,10 +13,10 @@ class BinarySearchTree:
         self.root = None
 
     def insert(self, data):
-        newNode = Node(data)
-        if self.root is None:  # first
+        newNode = Node(data)  # store new Node
+        if self.root is None:  # first case
             self.root = newNode
-        else:
+        else:  # others case
             currentNode = self.root
             while True:
                 if data > currentNode.data:  # add right branch
@@ -49,3 +49,4 @@ for i in inp:
     root = tree.insert(i)
 
 tree.printTree(root)
+
