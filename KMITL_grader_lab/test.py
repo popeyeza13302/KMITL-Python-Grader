@@ -98,3 +98,8 @@ def testWhileFunc():
         return
 
 testWhileFunc()
+
+while True:
+    break
+else:
+    print('MAINA')
