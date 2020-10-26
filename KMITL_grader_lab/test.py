@@ -107,3 +107,9 @@ else:
 for i in range(5):
     i += 1
     print('WTF',i)
+
+x = 123
+if x is not None:
+    print('if None')
+else:
+    print('not print')
