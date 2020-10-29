@@ -55,7 +55,7 @@ def closestValue(rootNode, value):
         if i == value or i > value:
             break
 
-    print('Closest value of', value, ':', cValue)
+    print('Closest data of', value, ':', cValue)
 
 
 
@@ -63,22 +63,22 @@ def closestValue(rootNode, value):
     cValue = None
     currentNode = rootNode
     while currentNode is not None:
-        if value == currentNode.data:
-            cValue = value
+        if data == currentNode.data:
+            cValue = data
             break
-        if value > currentNode.data:
+        if data > currentNode.data:
             if currentNode.right is None:
                 cValue = currentNode.data
                 break
             currentNode = currentNode.right
 
-        elif value < currentNode.data:
+        elif data < currentNode.data:
             if currentNode.left is None:
                 cValue = currentNode.data
                 break
             currentNode = currentNode.left
 
-    print('Closest value of', value, ':', cValue)
+    print('Closest data of', data, ':', cValue)
 
     '''
 

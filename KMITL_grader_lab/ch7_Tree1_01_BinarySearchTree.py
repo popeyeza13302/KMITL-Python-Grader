@@ -31,7 +31,7 @@ class BinarySearchTree:
                         break
                     currentNode = currentNode.left  # point to next node
 
-        return self.root  # always return root
+        return self.root  # always return node
 
     def printTree(self, node, level=0):
         if node is None:

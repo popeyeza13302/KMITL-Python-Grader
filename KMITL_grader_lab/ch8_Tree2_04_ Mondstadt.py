@@ -17,7 +17,7 @@ def recursionTree(n):
     return powerList[n] + sum           # sum of (powerList[index] + sum)
 
 
-print(recursionTree(0))                 # root sum (index = 0)
+print(recursionTree(0))                 # node sum (index = 0)
 
 for i in groupList:
     i = list(map(int, i.split()))       # 2 group compare

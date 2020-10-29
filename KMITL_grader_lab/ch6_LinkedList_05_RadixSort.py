@@ -79,7 +79,7 @@ class SinglyLinkedList:
         return popNode  # return None or Node
 
 # CAUTION! this is not a real radixSort...
-# it's sort inside it's own value.
+# it's sort inside it's own data.
 def radixSort(linkedList):
     state = False
     time = 0

@@ -78,7 +78,7 @@ class BinarySearchTree:
     def recurNode(self, node):      # depth first search
 
         if node.left is None and node.right is None:    # check if it is last node
-            return node.data                        # return last node value
+            return node.data                        # return last node data
 
         left = self.recurNode(node.left)
         right = self.recurNode(node.right)
@@ -101,7 +101,7 @@ class BinarySearchTree:
 
         while not queue.isEmpty():
             currentNode = queue.deQ()
-            count += currentNode.data   # plus value of every node in tree
+            count += currentNode.data   # plus data of every node in tree
             if currentNode.left is not None:
                 queue.enQ(currentNode.left)
             if currentNode.right is not None:
@@ -123,10 +123,10 @@ tree = BinarySearchTree()
 
 if len(inp) == k//2+1:
     root = tree.insert(inp, k)          # insert with breadth first search
-    #tree.printTree(root)
+    #tree.printTree(node)
     tree.recurNode(root)                # recursion of lessValue
     #print('------------------')
-    #tree.printTree(root)
+    #tree.printTree(node)
     tree.calcurateNumber()                   # plus every Value in tree
 else:
     print('Incorrect Input')

@@ -14,15 +14,15 @@ element_at(pos)/node_at(pos)
 
 is_empty()
 
-push_back(value)  # queue push
-push_front(value)  # stack push
+push_back(data)  # queue push
+push_front(data)  # stack push
 pop_back()  # stack pop
 pop_front()  # queue pop
 
 ADVANCE
-insert(pos, value)
-pop(pos, value)
-remove(value) + index_of(value)
+insert(pos, data)
+pop(pos, data)
+remove(data) + index_of(data)
 """
 
 class DoublyLinkedList:
@@ -82,7 +82,7 @@ class DoublyLinkedList:
             print("Can't pop_back: empty list")
             return -1
         else:
-            value = self.tail.value
+            value = self.tail.data
             prev = self.tail.prev_node
             self.tail.prev_node = None
             self.tail = prev
@@ -97,7 +97,7 @@ class DoublyLinkedList:
             print("Can't pop_front: empty list")
             return -1
         else:
-            value = self.head.value
+            value = self.head.data
             next_node = self.head.next_node
             self.head.next_node = None
             self.head = next_node
@@ -151,7 +151,7 @@ class DoublyLinkedList:
         curr = self.head
         count = 0
         while curr is not None:
-            if curr.value == value:
+            if curr.data == value:
                 return count
             curr = curr.next_node
             count += 1
@@ -167,14 +167,14 @@ class DoublyLinkedList:
             else:
                 self.pop(pos)
         else:
-            print("Empty list or no such value")
+            print("Empty list or no such data")
             return
 
     def __str__(self):
         lst = []
         curr = self.head
         while curr is not None:
-            lst.append(curr.value)
+            lst.append(curr.data)
             curr = curr.next_node
         return str(lst)
 

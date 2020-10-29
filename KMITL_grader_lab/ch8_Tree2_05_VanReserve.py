@@ -16,7 +16,7 @@ van = {}    # dict
 
 for i in range(int(k)):
     num.append(i + 1)           # number of van
-    van[i+1] = van.get(i+1, 0)  # set day to 0 of van  // .get(key, defaultNum)
+    van[i+1] = van.get(i+1, 0)  # set day to 0 of van  // .get(data, defaultNum)
 
 for i in range(len(dayList)):
     #printTree(0)
@@ -52,7 +52,7 @@ for i in range(k):
     day.append(0)
 
 
-# tree.root = tree.insert(0, numberList)
+# tree.node = tree.insert(0, numberList)
 
 def insertSort(n, amountDay):
     if n == 0:
@@ -156,7 +156,7 @@ for i in range(len(dayInputList)):
 
     def swapRootMin(self):
         lastNode = None
-        currentNode = self.root
+        currentNode = self.node
         while lastNode is None:
             if currentNode.right is not None:
                 currentNode = currentNode.right
@@ -165,9 +165,9 @@ for i in range(len(dayInputList)):
             else:
                 lastNode = currentNode      # get last Node (nothing to right and left)
 
-        lastNode.data, self.root.data = self.root.data, lastNode.data   # SWAP!!!!
+        lastNode.data, self.node.data = self.node.data, lastNode.data   # SWAP!!!!
 
-        print(self.root, ':',lastNode)
+        print(self.node, ':',lastNode)
 
 '''
 
@@ -177,15 +177,15 @@ for i in range(len(dayInputList)):
 '''
 if dayList[n] > dayList[2*n+1] or dayList[n] > dayList[2*n+2]:  # if left or right less day than parent
     if dayList[2*n+1] > dayList[2*n+2]: # left day > right day
-        numberList[n], numberList[2*n+2] = numberList[2*n+2], numberList[n]  # swap less value(right) to parent
-        dayList[n], dayList[2*n+2] = dayList[2*n+2], dayList[n]  # swap less value(right) to parent
+        numberList[n], numberList[2*n+2] = numberList[2*n+2], numberList[n]  # swap less data(right) to parent
+        dayList[n], dayList[2*n+2] = dayList[2*n+2], dayList[n]  # swap less data(right) to parent
         minHeapArray(2*n+2, amountDay)  # recursion right...
 
     elif dayList[2*n+1] < dayList[2*n+2]:   # left day < right day
         print('tttt')
 
-        numberList[n], numberList[2*n+1] = numberList[2*n+1], numberList[n]  # swap less value(left) to parent
-        dayList[n], dayList[2*n+1] = dayList[2*n+1], dayList[n]  # swap less value(left) to parent
+        numberList[n], numberList[2*n+1] = numberList[2*n+1], numberList[n]  # swap less data(left) to parent
+        dayList[n], dayList[2*n+1] = dayList[2*n+1], dayList[n]  # swap less data(left) to parent
         print('numberList', numberList)
         print('dayList', dayList)
         minHeapArray(2*n+1, amountDay)  # recursion left...
@@ -193,23 +193,23 @@ if dayList[n] > dayList[2*n+1] or dayList[n] > dayList[2*n+2]:  # if left or rig
 
 elif dayList[n] == dayList[2*n+1] and dayList[n] == dayList[2*n+2]: # if left and right more than equal day to parent
     if numberList[2*n+1] > numberList[2*n+2]:   # left num > right num
-        numberList[n], numberList[2*n+2] = numberList[2*n+2], numberList[n]  # swap less value(right) to parent
-        dayList[n], dayList[2*n+2] = dayList[2*n+2], dayList[n]  # swap less value(right) to parent
+        numberList[n], numberList[2*n+2] = numberList[2*n+2], numberList[n]  # swap less data(right) to parent
+        dayList[n], dayList[2*n+2] = dayList[2*n+2], dayList[n]  # swap less data(right) to parent
         minHeapArray(2*n+2, amountDay)   # recursion right...
 
     elif numberList[2*n+1] < numberList[2*n+2]: # left num < right num
-        numberList[n], numberList[2*n+1] = numberList[2*n+1], numberList[n]  # swap less value(left) to parent
-        dayList[n], dayList[2*n+1] = dayList[2*n+1], dayList[n]  # swap less value(left) to parent
+        numberList[n], numberList[2*n+1] = numberList[2*n+1], numberList[n]  # swap less data(left) to parent
+        dayList[n], dayList[2*n+1] = dayList[2*n+1], dayList[n]  # swap less data(left) to parent
         minHeapArray(2*n+1, amountDay)  # recursion left...
 
 elif dayList[n] == dayList[2*n+1]:  # if parent day == left day
-    numberList[n], numberList[2*n+1] = numberList[2*n+1], numberList[n]  # swap less value(left) to parent
-    dayList[n], dayList[2*n+1] = dayList[2*n+1], dayList[n]  # swap less value(left) to parent
+    numberList[n], numberList[2*n+1] = numberList[2*n+1], numberList[n]  # swap less data(left) to parent
+    dayList[n], dayList[2*n+1] = dayList[2*n+1], dayList[n]  # swap less data(left) to parent
     minHeapArray(2*n+1, amountDay)  # recursion left...
 
 elif dayList[n] == dayList[2*n+2]:  # if parent day == right day
-    numberList[n], numberList[2*n+2] = numberList[2*n+2], numberList[n]  # swap less value(right) to parent
-    dayList[n], dayList[2*n+2] = dayList[2*n+2], dayList[n]  # swap less value(right) to parent
+    numberList[n], numberList[2*n+2] = numberList[2*n+2], numberList[n]  # swap less data(right) to parent
+    dayList[n], dayList[2*n+2] = dayList[2*n+2], dayList[n]  # swap less data(right) to parent
     minHeapArray(2*n+2, amountDay)  # recursion right...
 
 

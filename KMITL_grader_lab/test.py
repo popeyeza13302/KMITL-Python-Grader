@@ -113,3 +113,9 @@ if x is not None:
     print('if None')
 else:
     print('not print')
+
+exex = 12345
+print(str(exex)[1:])
+
+
+print(str(exex).zfill(10))

@@ -21,7 +21,7 @@ def asteroid_collision(asts):
 
     else:
         # normal case
-        return [asts[0]] + results  # return value back...
+        return [asts[0]] + results  # return data back...
 
 
 x = input("Enter Input : ").split(",")
