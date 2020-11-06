@@ -14,7 +14,7 @@ def insertionRecursion(array, n):
     if len(array) != n:
         print(f'insert {last} at index {j+1} :', array[:n], array[n:])
     else:
-        print(f'insert {last} at index {j + 1} :', array)
+        print(f'insert {last} at index {j+1} :', array)
 
 
 def forLoopRecursion(array, j, last):
