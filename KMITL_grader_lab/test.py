@@ -119,3 +119,8 @@ print(str(exex)[1:])
 
 
 print(str(exex).zfill(10))
+
+if 'a' >= 'b':
+    print('a > b')
+else:
+    print('b > a')
