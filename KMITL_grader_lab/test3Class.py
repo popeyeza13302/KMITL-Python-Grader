@@ -1,6 +1,7 @@
 class TestClass:
 
     def __init__(self):
+        self.lst = []
         self.size = 0
 
     # len can't be negative
@@ -12,6 +13,9 @@ class TestClass:
 
     def minus(self):
         self.size -= 1
+
+    def insert(self, value):
+        self.lst.append(value)
 
 
 A = TestClass()
