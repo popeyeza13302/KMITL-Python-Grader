@@ -20,3 +20,5 @@ answer = [[1,2],[2,3],[4,2],[2,11]]
 
 for i in enumerate(answer):
     print(i)
+
+print(answer[1:])
