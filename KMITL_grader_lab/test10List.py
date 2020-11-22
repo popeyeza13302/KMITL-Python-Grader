@@ -14,3 +14,9 @@ for e in edge_lst:
 
 
 print(adj_lst)
+
+
+answer = [[1,2],[2,3],[4,2],[2,11]]
+
+for i in enumerate(answer):
+    print(i)
