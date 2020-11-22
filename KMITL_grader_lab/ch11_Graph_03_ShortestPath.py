@@ -1,5 +1,25 @@
 inputlst, inputpath = input('Enter : ').split('/')
 
+'''
+# *** !!! READ ME !!! **
+    this is dijkstra shortestPath concept by sir.sirawit 
+    
+    1. make adjacency matrix 2D
+        1.1 node 1D 
+    2. created ...
+        2.1 visited 1D       progress of dijkstra 
+        2.2 weightlst 1D     progress of dijkstra 
+        2.3 prevlst 1D       later..use for find shorest path in the end 
+    3. methods
+        3.1 shortest dijkstra recursive (update all shortest distance from start to end)
+        3.2 print shortest (from prevlst) track back to origin 
+    4. DONE ! 
+    
+    caution : 
+        - careful of can't find path...
+            - minIndex = 999 (infinity)
+            - (start or end) not in node 
+'''
 node = []
 
 for i in inputlst.split(','):
