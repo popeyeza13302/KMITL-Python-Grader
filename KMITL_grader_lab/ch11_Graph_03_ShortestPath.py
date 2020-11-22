@@ -10,6 +10,9 @@ inputlst, inputpath = input('Enter : ').split('/')
         2.1 visited 1D       progress of dijkstra 
         2.2 weightlst 1D     progress of dijkstra 
         2.3 prevlst 1D       later..use for find shorest path in the end 
+        
+        2.4 weightlst[startindex] set to 0 *** ALWAYS ! (distance if self is 0)
+        
     3. methods
         3.1 shortest dijkstra recursive (update all shortest distance from start to end)
         3.2 print shortest (from prevlst) track back to origin 
@@ -59,9 +62,6 @@ def shortestPath(start, end, visited, weightlst, prevlst):
     if start == end:    # base case
         return
 
-    min = 999           # init min
-    minIndex = 999      # init min index
-
     # begin with relaxation
     for index, col in enumerate(matrix[startIndex]):
         if col != 0:          # if row has some arrow(value)    # dijkstra formula
@@ -70,6 +70,8 @@ def shortestPath(start, end, visited, weightlst, prevlst):
                 prevlst[index] = start                        # add prevNode to lst (for track back to start in the end)
     # done with relaxation
 
+    min = 999           # init min
+    minIndex = 999      # init min index
     # for selected min with not already visited
     for index, col in enumerate(weightlst):
         if col < min and node[index] not in visited:
@@ -133,5 +135,5 @@ for i in inputpath.split(','):
     shortestPath(startNode, endNode, visited, weightlst, prevlst)
     printShortest(startNode, endNode, prevlst)
 
-
-# v0 1 v1,v1 1 v2,v2 1 v3,v0 1 v3/v0 v3  #v0 v1,v0 v2,
+# v0 1 v1,v1 1 v2,v2 1 v3,v0 1 v3/v0 v1,v0 v2,v0 v3
+# 1 2 2,1 4 3,2 1 3,2 7 4,3 3 5,4 1 6,5 2 4,5 5 6/1 6
